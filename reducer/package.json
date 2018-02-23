@@ -1,0 +1,5 @@
+{
+"name":"websocket-for-redux-saga/reducer",
+"private":true,
+"main":"../lib/reducer.js"
+}

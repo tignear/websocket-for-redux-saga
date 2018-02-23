@@ -1,0 +1,5 @@
+{
+"name":"websocket-for-redux-saga/saga",
+"private":true,
+"main":"../lib/saga.js"
+}

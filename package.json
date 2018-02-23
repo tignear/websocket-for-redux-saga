@@ -26,6 +26,9 @@
     "redux-saga-test-plan": "^3.5.0"
   },
   "files": [
-    "lib"
+    "lib",
+    "action",
+    "reducer",
+    "saga"
   ]
 }

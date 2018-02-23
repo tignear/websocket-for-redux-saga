@@ -1,10 +1,10 @@
 {
   "name": "websocket-for-redux-saga",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Websocket for redux-saga.It has an API similar to the browser's API",
-  "repository":{
-    "type":"git",
-    "url":"git+https://github.com/tignear/websocket-for-redux-saga.git"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tignear/websocket-for-redux-saga.git"
   },
   "main": "lib/index.js",
   "scripts": {

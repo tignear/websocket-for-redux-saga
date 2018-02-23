@@ -1,12 +1,12 @@
 {
   "name": "websocket-for-redux-saga",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Websocket for redux-saga.It has an API similar to the browser's API",
   "repository":{
     "type":"git",
     "url":"git+https://github.com/tignear/websocket-for-redux-saga.git"
   },
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "build": "babel src --out-dir ./lib --source-maps inline"

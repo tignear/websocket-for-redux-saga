@@ -1,6 +1,6 @@
 {
   "name": "websocket-for-redux-saga",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Websocket for redux-saga.It has an API similar to the browser's API",
   "repository": {
     "type": "git",

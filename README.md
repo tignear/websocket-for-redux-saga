@@ -17,15 +17,15 @@ import {STATE_ONCLOSE,STATE_ONOPEN,STATE_ONERROR,STATE_ONMESSAGE} from 'websocke
 
 const wsid='wsid';
 class WebSoketEcho extends React.Component{
-	constructor(props) {
-   	super(props);
-    this.state = {
+constructor(props) {
+	super(props);
+    	this.state = {
    		messagearea:'',
    		addressarea:''
-    };
+    	};
   }
   sendHandle(){
-    	this.props.dispatch(message(wsid,this.state.messagearea));
+  	this.props.dispatch(message(wsid,this.state.messagearea));
     	this.setState({messagearea:''});
   }
   closeHandle(){

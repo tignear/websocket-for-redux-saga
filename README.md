@@ -3,7 +3,7 @@ Websocket for redux-saga.It has an API similar to the browser's API
 ## Install
 ```npm i -S websocket-for-redux-saga```
 ## Build
-```git clone https://github.com/tignear/websocket-for-redux-saga.git```
+```git clone https://github.com/tignear/websocket-for-redux-saga.git```  
 ```npm run build```
 ## Testing
 ```npm run test```

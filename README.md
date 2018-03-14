@@ -29,7 +29,7 @@ class WebSoketEcho extends React.Component{
     this.setState({messagearea:''});
   }
   closeHandle(){
-    this.props.dispatch(close(wsid,{code:1000,reason:'text'}));
+    this.props.dispatch(close(wsid,false,{code:1000,reason:'text'}));
   }
   openHandle(){
     this.props.dispatch(close(wsid));

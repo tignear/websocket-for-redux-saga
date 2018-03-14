@@ -1,4 +1,4 @@
-import {OPEN,open,MESSAGE,message,CLOSE,close,ONOPEN,onopen,ONMESSAGE,onmessage,ONCLOSE,onclose,ONERROR,onerror} from "../src/action"
+import {OPEN,open,MESSAGE,message,CLOSE,close,REMOVE,remove,ONOPEN,onopen,ONMESSAGE,onmessage,ONCLOSE,onclose,ONERROR,onerror} from "../src/action"
 
 describe('Action', () => {
 	//define 
@@ -35,7 +35,15 @@ describe('Action', () => {
 			expect(action.type).toMatch(CLOSE);
 		});
 	});
-
+	describe('remove',()=>{
+		const action=remove(id);
+		it('payload',()=>{
+			expect(action.payload).toEqual({id});
+		});
+		it('type',()=>{
+			expect(action.type).toMatch(REMOVE);
+		});
+	});
 	describe('onopen',()=>{
 		const event =new Event('open');
 		const action=onopen(id,event);
@@ -75,5 +83,5 @@ describe('Action', () => {
 		it('type',()=>{
 			expect(action.type).toMatch(ONERROR);
 		})
-	})
+	});
 });

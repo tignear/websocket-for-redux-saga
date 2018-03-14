@@ -1,5 +1,5 @@
 import reducer,{initialState,STATE_ONOPEN,STATE_ONCLOSE,STATE_ONMESSAGE,STATE_ONERROR} from '../src/reducer'
-import {onopen,onclose,onmessage,onerror} from '../src/action'
+import {onopen,onclose,onmessage,onerror,remove} from '../src/action'
 
 
 describe('reducer',()=>{
@@ -50,6 +50,17 @@ describe('reducer',()=>{
 		});
 		it('event',()=>{
 			expect(newState.websocket[id].event).toBe(event);
+		});
+	});
+	describe('remove',()=>{
+		const state=Object.assign({},initialState);
+		state.websocket[id]=null;
+		const newState=reducer(state,remove(id));
+		it('close',()=>{
+			expect(newState).not.toBe(state);
+		});
+		it('id',()=>{
+			expect(newState.websocket[id]).toBeUndefined();
 		});
 	});
 });

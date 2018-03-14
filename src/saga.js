@@ -81,11 +81,14 @@ function* closeWatcher(){
 	yield takeEvery(`${close}`,closeWorker);
 }
 function* closeWorker(action){
-	const {id,option={}}=action.payload;
+	const {id,removal,option={}}=action.payload;
 	const socket=yield call(getSocket,id);
 	if(socket){
 		yield call(socket.close.bind(socket),option.code,option.reason);
 		yield call(deleteSocket,id);
+		if(removal){
+			yield put(remove,id);
+		}
 	}
 }
 function* openWatcher(){

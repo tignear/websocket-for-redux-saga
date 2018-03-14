@@ -9,6 +9,7 @@ Websocket for redux-saga.It has an API similar to the browser's API
 ```npm run test```
 
 ## Example
+with React.
 ```
 import React from 'react';
 import { connect } from 'react-redux';
@@ -47,32 +48,32 @@ class WebSoketEcho extends React.Component{
       case STATE_ONERROR:
         break;
       case STATE_ONMESSAGE:
-	viewValue=event.data;
-	break;
+        viewValue=event.data;
+        break;
       case STATE_ONCLOSE:
-	viewValue=event.code+":"+event.reason;
-	break;
+        viewValue=event.code+":"+event.reason;
+        break;
     }
     return (
       <div>
         <p>state:{state}</p>
-	<p>value:{viewValue}</p>
-	<button type="button" onClick={()=>this.openHandle()}>Open</button>
-	<button type="button" onClick={()=>this.closeHandle()}>Close</button><br/>
-	<input type="text" value={this.state.addressarea} onChange={(e)=>this.setState({addressarea:e.target.value})} placeholder="input address" /><br/>
-	<textarea name="messagearea" value={this.state.messagearea} onChange={(e) => this.setState({messagearea: e.target.value})} placeholder="input your text"></textarea>
-	<button type="button" onClick={()=>this.sendHandle()}>Send</button>
+        <p>value:{viewValue}</p>
+        <button type="button" onClick={()=>this.openHandle()}>Open</button>
+        <button type="button" onClick={()=>this.closeHandle()}>Close</button><br/>
+        <input type="text" value={this.state.addressarea} onChange={(e)=>this.setState({addressarea:e.target.value})} placeholder="input address" /><br/>
+        <textarea name="messagearea" value={this.state.messagearea} onChange={(e) => this.setState({messagearea: e.target.value})} placeholder="input your text"></textarea>
+        <button type="button" onClick={()=>this.sendHandle()}>Send</button>
       </div>
     );
   }
 }
 function mapStateToProps(state){
-	return state;
+  return state;
 }
 function mapDispatchToProps(dispatch){
-	return {
-		dispatch
-	};
+  return {
+    dispatch
+  };
 }
 export default connect(mapStateToProps,mapDispatchToProps)(WebSoketEcho);
 ```
